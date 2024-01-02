@@ -1,3 +1,4 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -6,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Closet from './screens/Closet';
 import Account from './screens/Account';
+import {ViewColumnsIcon, UserIcon} from "react-native-heroicons/outline"
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -14,8 +16,31 @@ function Home() {
     return (
 
       <Tab.Navigator>
-        <Tab.Screen name='Closet' component={Closet} options={{headerShown: false}} />
-        <Tab.Screen name='Account' component={Account} options={{headerShown: false}} />
+        <Tab.Screen 
+        name='Closet' 
+        component={Closet} 
+        options={{
+          headerShown: false, 
+          tabBarIcon: () => {
+            return (
+            <ViewColumnsIcon color={"black"}/>
+            )
+          }
+        }} 
+        />
+
+        <Tab.Screen 
+        name='Account' 
+        component={Account} 
+        options={{
+          headerShown: false,
+          tabBarIcon: () => {
+            return (
+              <UserIcon color={"black"}/>
+            )
+          }
+        }} 
+        />
       </Tab.Navigator>
 
     )

@@ -9,7 +9,7 @@ const Account = () => {
         {/* Header */}
         <View className='p-5 flex flex-row'>
           
-            <Text className='text-lg'>Account</Text>
+            <Text className='text-xl font-bold'>Account</Text>
             
         </View>
 

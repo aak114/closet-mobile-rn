@@ -12,7 +12,7 @@ const Closet = () => {
         <View className='p-5 flex flex-row items-center'>
 
             <View className='flex-1'>
-              <Text className='text-xl'>Closet</Text>
+              <Text className='text-xl font-bold'>Closet</Text>
             </View>
             
             <TouchableOpacity>
