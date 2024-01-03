@@ -7,7 +7,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Closet from './screens/Closet';
 import Account from './screens/Account';
-import {ViewColumnsIcon, UserIcon} from "react-native-heroicons/outline"
+import {ViewColumnsIcon, UserIcon, CalendarIcon} from "react-native-heroicons/outline"
+import Outfits from './screens/Outfits';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -16,6 +17,20 @@ function Home() {
     return (
 
       <Tab.Navigator>
+
+        <Tab.Screen 
+        name='Outfits' 
+        component={Outfits} 
+        options={{
+          headerShown: false, 
+          tabBarIcon: () => {
+            return (
+            <CalendarIcon color={"black"}/>
+            )
+          }
+        }} 
+        />  
+
         <Tab.Screen 
         name='Closet' 
         component={Closet} 
