@@ -4,7 +4,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import {PlusIcon} from "react-native-heroicons/outline"
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+
 const Closet = () => {
+
+  
+
   return (
     <SafeAreaView className='bg-white h-full'>
     
@@ -15,13 +19,14 @@ const Closet = () => {
               <Text className='text-xl font-bold'>Closet</Text>
             </View>
             
-            <TouchableOpacity>
+            <TouchableOpacity onPress={onOpen}>
               <PlusIcon  color={"black"}/>
             </TouchableOpacity>
             
             
         </View>
 
+        
 
 
     </SafeAreaView>

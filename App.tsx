@@ -10,6 +10,7 @@ import Account from './screens/Account';
 import {ViewColumnsIcon, UserIcon, CalendarIcon} from "react-native-heroicons/outline"
 import Outfits from './screens/Outfits';
 
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -61,7 +62,7 @@ function Home() {
     )
 }
 
-export default function App() {
+function App() {
   return (
 
     <NavigationContainer>
@@ -79,6 +80,14 @@ export default function App() {
     </NavigationContainer>
     
   );
+}
+
+export default function WrappedApp() {
+
+  return (
+      <App/>
+  )
+
 }
 
 

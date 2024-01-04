@@ -4,7 +4,7 @@ import {PlusIcon} from "react-native-heroicons/outline"
 
 const Outfits = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="bg-white h-full">
 
         {/* Header */}
         <View className='p-5 flex flex-row items-center'>
