@@ -19,7 +19,7 @@ const Closet = () => {
               <Text className='text-xl font-bold'>Closet</Text>
             </View>
             
-            <TouchableOpacity onPress={onOpen}>
+            <TouchableOpacity>
               <PlusIcon  color={"black"}/>
             </TouchableOpacity>
             
