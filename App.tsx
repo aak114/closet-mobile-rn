@@ -9,6 +9,7 @@ import Closet from './screens/Closet';
 import Account from './screens/Account';
 import {ViewColumnsIcon, UserIcon, CalendarIcon} from "react-native-heroicons/outline"
 import Outfits from './screens/Outfits';
+import { ActionSheetProvider } from '@expo/react-native-action-sheet';
 
 
 const Stack = createStackNavigator();
@@ -85,7 +86,9 @@ function App() {
 export default function WrappedApp() {
 
   return (
+    <ActionSheetProvider>
       <App/>
+    </ActionSheetProvider>
   )
 
 }
